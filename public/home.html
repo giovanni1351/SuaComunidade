@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-inner">
+            <div id="fechar" onclick="fechar()">X</div>
+            <h1>Faça sua denúncia</h1>
+
+            <form method="post" action="/denuncia">
+                <div class="labeled-input">
+                    <label for="Lugar">Local</label>
+                    <input type="text" name="Lugar" required>
+                </div>
+                <div class="labeled-input">
+                    <label for="tipo">Tipo de ocorrência</label>
+                    <select id="tipo" name="tipo">
+                        <option type="hidden" style="display: none;"></option>
+                        <option value="Assalto">Assalto </option>
+                        <option value="Buraco Na rua">Buraco Na rua</option>
+                        <option value="Falta de sinalização">Falta de sinalização</option>
+                        <option value="Falta de iluminação">Falta de iluminação</option>
+                        <option value="Acidente">Acidente</option>
+                    </select>
+                </div>
+                <div class="labeled-input">
+                    <label for="DataOcorrencia">Data da Ocorrencia</label>
+                    <input type="date" name="DataOcorrencia">
+                </div>
+                <div class="labeled-input">
+
+                    <label for="HoraOcorrencia">Hora da Ocorrencia</label>
+                    <input type="time" name="HoraOcorrencia">
+                </div>
+                <div class="labeled-input">
+                    <label for="Detalhes">Detalhes</label>
+                    <input type="text" name="Detalhes">
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <h1>Sua Comunidade!</h1>
+    <div class="mapa"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233625.05435647327!2d-46.671836287427155!3d-23.804674509449605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce3fc6927dd0c3%3A0xcdcd0d550f9656cf!2sS%C3%A3o%20Bernardo%20do%20Campo%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1684088840823!5m2!1spt-BR!2sbr"
+            width="80%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="criar">
+        <input type="button" onclick="abrir()" name="Denunciar" value="Denunciar">
+        <a href="/denuncias"><input type="button" name="Denuncias" value="Denuncias"></a>
+
+    </div>
+
+
+
+
+
+
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+        <script src="menu.js"></script>
+
+    </footer>
+
+</body>
+
+</html>

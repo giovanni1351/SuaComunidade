@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./denuncias.css">
+</head>
+<body>
+<div class="buton">
+  <a href="home.html">Home</a>
+  </div>
+
+<h2>Lista de usuários atual:</h2>
+
+<%for (var i = 0; i < usuarios.length; i++){%>
+<div class = "Infos">
+  <p>Nome: <%= Denuncias[i].db_data %></p>
+  <p>Login: <%= usuarios[i].db_detalhes %></p>
+  <p>Senha: <%= usuarios[i].db_local %></p>
+  <p>Senha: <%= usuarios[i].db_time %></p>
+  <p>Senha: <%= usuarios[i].db_tipo %></p>
+  <br>
+</div>
+<%}%>
+
+
+</body>
+</html>

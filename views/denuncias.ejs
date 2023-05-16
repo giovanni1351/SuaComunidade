@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./denuncias.css">
+</head>
+<body>
+<div class="buton">
+    <a href="../home.html">Inicial</a>
+</div>
+
+<h2>Denuncias:</h2>
+
+<%for (var i = 0; i < denuncias.length; i++){%>
+    <div class = "Infos">
+        <p>Lugar: <%= denuncias[i].local %></p>
+        <p>Detalhes: <%= denuncias[i].detalhes %></p>
+       <p>Data: <%= denuncias[i].data %></p>
+        <p>Horário: <%= denuncias[i].time %></p>
+        <p>tipo: <%= denuncias[i].tipo %></p>
+        <br>
+    </div>
+<%}%>
+
+
+</body>
+</html>
